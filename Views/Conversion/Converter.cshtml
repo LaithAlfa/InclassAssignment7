@@ -1,0 +1,44 @@
+@model ConverterViewModel 
+
+<form asp-controller="Conversion" asp-action="DoConversion" method="POST">
+  <!-- borrowed some of this from: https://www.w3schools.com/html/html_forms.asp -->
+  
+  Value to Convert:<br>
+  <input type="text" asp-for="@Model.ValueToConvert">
+  <br>
+  Conversion Type:<br>
+   <select type="text" asp-for="@Model.ConversionType">
+       <!--Mass-->
+        <option value="OuncestoPounds"> Ounces to Pounds</option>
+        <option value="OuncestoGrams"> Ounces to Grams</option>
+        <option value="OuncestoKilograms"> Ounces to Kilograms</option>
+        <option value="PoundstoOunces"> Pounds to Ounces</option>
+        <option value="PoundstoGrams"> Pounds to Grams</option>
+        <option value="PoundstoKilograms"> Pounds to Kilograms</option>
+        <option value="GramstoOunces"> Grams to Ounces</option>
+        <option value="GramstoPounds"> Grams to Pounds</option>
+        <option value="GramstoKilograms"> Grams to Kilograms</option>
+        <option value="KilogramstoOunces"> Kilograms to Ounces</option>
+        <option value="KilogramstoPounds"> Kilograms to Pounds</option>
+        <option value="KilogramstoGrams"> Kilograms to Grams</option>
+       <!--Length-->        
+        <option value="MeterstoFeet"> Meters to Feet</option>
+        <option value="MeterstoYards"> Meters to Yards</option>
+        <option value="FeettoMeters"> Feet to Meters</option>
+        <option value="FeettoYards"> Feet to Yards</option>
+        <option value="YardstoFeet"> Yards to Feet</option>
+        <option value="YardstoMeters"> Yards to Meters</option>
+       <!--Temp-->
+        <option value="CelciusToFahrenheit"> Celcius to Fahrenheit</option>
+        <option value="CelciustoKelvin"> Celcius to Kelvin</option>
+        <option value="FahrenheittoCelcius"> Fahrenheit to Celcius</option>
+        <option value="FahrenheittoCelcius"> Fahrenheit to Kelvin</option>
+        <option value="KelvintoFahrenheit"> Kelvin to Fahrenheit</option>
+        <option value="KelvintoCelcius"> Kelvin to Celcius</option>
+    </select>
+
+    <br>  
+    <br>
+
+<input type="submit" value="Convert"> 
+</form>
